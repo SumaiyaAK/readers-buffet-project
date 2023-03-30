@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Blogs from './components/Blogs/Blogs';
 import BlogsInfo from './components/BlogsInfo/BlogsInfo';
 import Header from './components/Header/Header';
 
 const App = () => {
+  const [showTime, setShowTime] = useState('')
   const readTime =(time) => {
-    console.log(time)
+    const previousReadTime = JSON.parse(localStorage.getItem("readTime"));
+    if(previousReadTime){
+      const sum = previousReadTime + time
+      localStorage.setItem("readTime", sum)
+      setShowTime(sum)
+    }
+    else{
+      localStorage.setItem("readTime", time);
+      setShowTime(time)
+    }
 
   }
   const markedRead = (marked) => {
@@ -21,7 +31,7 @@ const App = () => {
            <Blogs readTime={readTime} markedRead={markedRead}/>
         </div>
         <div className="blogs-info">
-          <BlogsInfo/>
+          <BlogsInfo showTime={showTime}></BlogsInfo>
         </div>
 
       </div>
