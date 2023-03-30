@@ -3,12 +3,14 @@ import React from 'react';
 const BlogsInfo = () => {
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card w-auto h-auto bg-indigo-900 shadow-xl mt-10">
                 <div className="card-body">
-                    <h2 className="card-title">Card title!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
+                    <div className='read-time border text-center px-4 py-4'>
+                    <h2 className="card-title ">Spent time read :</h2>
+                    
+                    </div>
+                    <div className="card-actions w-80 h-60 border">
+                        
                     </div>
                 </div>
             </div>

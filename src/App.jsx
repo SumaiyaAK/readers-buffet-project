@@ -9,7 +9,7 @@ const App = () => {
       <div>
         <Header/>
       </div>
-      <div className="main grid grid-flow-row-dense grid-cols-3 grid-rows-3 gap-36 justify-items-center mt-24">
+      <div className="main grid grid-flow-row-dense grid-cols-3 grid-rows-3 gap-20 justify-items-center mt-24">
         <div className="blogs-container col-span-2 gap-y-6">
            <Blogs/>
         </div>
