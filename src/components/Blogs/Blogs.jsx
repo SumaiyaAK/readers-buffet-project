@@ -1,6 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
 
 const Blogs = () => {
+    
+    useEffect(() => {
+         fetch("data.json")
+        .then((res) => res.json())
+        .then((data) => console.log(data))
+
+    },[])
+
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl">
