@@ -18,8 +18,19 @@ const App = () => {
     }
 
   }
+  // marked reading
+  const [showMarked, setShowMarked] = useState('')
   const markedRead = (marked) => {
-    console.log(marked)
+    const previousMarkedRead = JSON.parse(localStorage.getItem("markedRead"));
+    if(previousMarkedRead){
+      const sum = previousMarkedRead + marked
+      localStorage.setItem("markedRead", sum)
+      setShowMarked(sum)
+    }
+    else{
+      localStorage.setItem("markedRead", marked);
+      setShowMarked(marked)
+    }
   }
   return (
     <div className="Container mx-40">
@@ -31,7 +42,7 @@ const App = () => {
            <Blogs readTime={readTime} markedRead={markedRead}/>
         </div>
         <div className="blogs-info">
-          <BlogsInfo showTime={showTime}></BlogsInfo>
+          <BlogsInfo showMarked={showMarked} showTime={showTime}></BlogsInfo>
         </div>
 
       </div>

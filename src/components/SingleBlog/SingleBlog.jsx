@@ -9,12 +9,12 @@ const SingleBlog = ({ article, markedRead, readTime }) => {
                 <img src={article.Blog_cover_image} alt="" />
             </figure>
             <div className="card-body">
-                <div className='flex gap-60'>
+                <div className='flex gap-96'>
                     <div className='author-info flex gap-2'>
                         <img className="w-10 h-10" src={article.Author_image} alt="Shoes" />
                         <h5 className='text-xl'>{article.Author_name}</h5>
                     </div>
-                    <div className='flex'>
+                    <div className='flex justify-end'>
                         <p>{article.Read_time} min read</p>
                         <span onClick={() => markedRead(article.Blog_title)}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
