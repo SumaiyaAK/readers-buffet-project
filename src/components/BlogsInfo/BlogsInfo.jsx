@@ -16,12 +16,10 @@ const BlogsInfo = ({ showTime, showMarked }) => {
     // marked Read
     const [read, setRead] = useState(showMarked);
 
-    const [readCount, setReadCount] = useState(0);
-
     useEffect(() => {
         const storageReadTime = localStorage.getItem("markedRead");
 
-        if (storageReadTime.length > 0) {
+        if (storageReadTime != null && storageReadTime.length > 0) {
             setRead(JSON.parse(storageReadTime));
         }
 
@@ -40,7 +38,7 @@ const BlogsInfo = ({ showTime, showMarked }) => {
 
                     </div>
                     <div className="card-actions w-80 h-60 border">
-                        <h2 className='text-2xl p-5'>Bookmarked Blogs : {readCount}</h2>
+                        <h2 className='text-2xl p-5'>Bookmarked Blogs : {read.length}</h2>
                         <ul>
                             {read.map((readBook) => (
                                 <li key={readBook}>{readBook}</li>

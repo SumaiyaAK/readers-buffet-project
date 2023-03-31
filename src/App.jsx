@@ -7,10 +7,14 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
-  const [showTime, setShowTime] = useState('');
+  const [showTime, setShowTime] = useState(0);
 
   const readTime = (time) => {
-    const previousReadTime = JSON.parse(localStorage.getItem("readTime"));
+    const previousReadTime = localStorage.getItem("readTime");
+
+    if (previousReadTime == null) {
+      previousReadTime = 0;
+    }
 
     if (previousReadTime) {
       const sum = previousReadTime + time
@@ -29,9 +33,9 @@ const App = () => {
   function getShowMarkedFromLocalStorage() {
     let previousMarkedReadList = localStorage.getItem("markedRead");
 
-    if (previousMarkedReadList.length > 0) {
+    if (previousMarkedReadList != null && previousMarkedReadList.length > 0) {
       return JSON.parse(previousMarkedReadList);
-      
+
     }
     return [];
   }
@@ -41,7 +45,7 @@ const App = () => {
 
 
     let isBookRead = false;
-    if (previousMarkedReadList.length > 0) {
+    if (previousMarkedReadList != null && previousMarkedReadList.length > 0) {
       previousMarkedReadList = JSON.parse(previousMarkedReadList);
     } else {
       previousMarkedReadList = [];
@@ -50,7 +54,7 @@ const App = () => {
     //find if the book is read or not
 
     for (const book of previousMarkedReadList) {
-      if(book == markedBook){
+      if (book == markedBook) {
         isBookRead = true;
       }
     }
@@ -61,33 +65,14 @@ const App = () => {
       // alert('Book is read already!');
       toast("Book is already read !")
     } else {
-      
+
       // insert this book to array
       previousMarkedReadList.push(markedBook);
       // show it in page
-
+      setShowMarked(previousMarkedReadList);
       // store it in localstorage
       localStorage.setItem("markedRead", JSON.stringify(previousMarkedReadList));
     }
-
-
-    // let previousMarkedRead = JSON.parse(localStorage.getItem("markedRead"));
-
-
-
-    // setShowMarked(marked)
-
-    /*    if(previousMarkedRead){
-          // const sum = parseInt(previousReadTime) + 1
-          // localStorage.setItem("readTime", sum)
-          // setShowTime(sum)
-        }
-        else{
-          localStorage.setItem("markedRead", marked);
-          setShowMarked(marked)
-        }
-    */
-
 
   }
 
