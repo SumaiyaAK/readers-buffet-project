@@ -12,7 +12,11 @@ const SingleBlog = ({ article, markedRead, readTime }) => {
                 <div className='flex gap-96'>
                     <div className='author-info flex gap-2'>
                         <img className="w-10 h-10" src={article.Author_image} alt="Shoes" />
+                        <div>
                         <h5 className='text-xl'>{article.Author_name}</h5>
+                        <p>{article.published_date}</p>
+                        </div>
+                        
                     </div>
                     <div className='flex justify-end'>
                         <p>{article.Read_time} min read</p>
@@ -26,6 +30,7 @@ const SingleBlog = ({ article, markedRead, readTime }) => {
                     </div>
                 </div>
                 <h2 className="card-title">{article.Blog_title}</h2>
+                
 
                 <div className="card-actions mt-4 cursor-pointer">
                     <a onClick={() => readTime(article.Read_time)}>Mark as read</a>

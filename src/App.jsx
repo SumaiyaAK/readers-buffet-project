@@ -3,6 +3,8 @@ import Blogs from './components/Blogs/Blogs';
 import BlogsInfo from './components/BlogsInfo/BlogsInfo';
 import Header from './components/Header/Header';
 import Info from './components/Info/Info';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   const [showTime, setShowTime] = useState('');
@@ -56,7 +58,8 @@ const App = () => {
 
     if (isBookRead) {
       //show alert
-      alert('Book is read already!');
+      // alert('Book is read already!');
+      toast("Book is already read !")
     } else {
       
       // insert this book to array
@@ -103,6 +106,8 @@ const App = () => {
         </div>
 
       </div>
+
+      <ToastContainer></ToastContainer>
 
     </div>
   );

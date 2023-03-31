@@ -5,7 +5,8 @@
         "Blog_title": "How to get your first job as a self-taught programmer",
         "Blog_cover_image": "https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
         "Author_image": "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-        "Read_time": 6
+        "Read_time": 6,
+        "published_date" : "march 14 ( 3 days ago)"
     },
     {
         "id": "02",
@@ -13,7 +14,8 @@
         "Blog_title": "How to be a good reader",
         "Blog_cover_image": "https://images.unsplash.com/photo-1630343710506-89f8b9f21d31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         "Author_image": "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-        "Read_time": 5
+        "Read_time": 5,
+        "published_date" : "march 10 ( 7 days ago)"
     },
     {
         "id": "03",
@@ -21,7 +23,8 @@
         "Blog_title": "How to read psychology",
         "Blog_cover_image": "https://images.unsplash.com/photo-1638443436690-db587cc66f12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         "Author_image": "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-        "Read_time": 8
+        "Read_time": 8,
+        "published_date" : "feb 28 ( 21 days ago)"
     },
     {
         "id": "04",
@@ -29,6 +32,7 @@
         "Blog_title": "7 hacks to earn money online",
         "Blog_cover_image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
         "Author_image": "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-        "Read_time": 10
+        "Read_time": 10,
+        "published_date" : "feb 26 (23 days ago)"
     }
 ]
